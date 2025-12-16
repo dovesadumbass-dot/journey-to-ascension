@@ -933,6 +933,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
             "<p>You keep half your Items (rounded up).</p>" +
             "<p>The effects of used Items disappear.</p>" +
             "<p>You keep all your Skills and Perks.</p>";
+        doEnergyReset();
     } else {
         energy_reset_div.innerHTML = "<h2>Last Run</h2>";
     }
