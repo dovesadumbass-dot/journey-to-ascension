@@ -945,7 +945,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
     button.addEventListener("click", () => {
         energy_reset_div.classList.add("hidden");
         if (GAMESTATE.is_in_energy_reset) {
-            doEnergyReset();
+            //doEnergyReset();
         }
     });
     setupTooltipStatic(button, button.textContent, GAMESTATE.is_in_energy_reset ? "Do Energy Reset" : "Return to the game");
