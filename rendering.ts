@@ -935,7 +935,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
     } else {
         energy_reset_div.classList.remove("hidden");
         energy_reset_div.innerHTML = "";
-        energy_reset_div.innerHTML = "<h2>Last Run</h2>";
+        energy_reset_div.innerHTML = "<h2>Last Run!</h2>";
     }
 
     const button = document.createElement("button");
@@ -945,7 +945,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
     button.addEventListener("click", () => {
         energy_reset_div.classList.add("hidden");
         if (GAMESTATE.is_in_energy_reset) {
-            //doEnergyReset();
+            doEnergyReset();
         }
     });
     setupTooltipStatic(button, button.textContent, GAMESTATE.is_in_energy_reset ? "Do Energy Reset" : "Return to the game");
@@ -1048,7 +1048,7 @@ function populateEndOfContent(end_of_content_div: HTMLElement) {
     setupTooltipStatic(reset_button, "Do Energy Reset", "Do a regular Energy Reset to keep on playing");
     reset_button.addEventListener("click", () => {
         end_of_content_div.classList.add("hidden");
-        doEnergyReset();
+        ();
     });
 }
 
