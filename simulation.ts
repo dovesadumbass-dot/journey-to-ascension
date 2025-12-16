@@ -520,7 +520,7 @@ export function calcEnergyDrainPerTick(task: Task, is_single_tick: boolean): num
 }
 
 function doAnyReset() {
-    GAMESTATE.current_zone = 1;
+    GAMESTATE.current_zone = 0;
     resetTasks();
     GAMESTATE.current_energy = GAMESTATE.max_energy;
     GAMESTATE.is_in_energy_reset = false;
