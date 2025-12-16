@@ -935,7 +935,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
     } else {
         energy_reset_div.classList.remove("hidden");
         energy_reset_div.innerHTML = "";
-        energy_reset_div.innerHTML = "<h2>Last Run!</h2>";
+        energy_reset_div.innerHTML = "<h2>Last Run info</h2>";
     }
 
     const button = document.createElement("button");
