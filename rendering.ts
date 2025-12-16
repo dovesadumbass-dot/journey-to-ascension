@@ -928,6 +928,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
     energy_reset_div.innerHTML = "";
 
     if (GAMESTATE.is_in_energy_reset) {
+        energy_reset_div.classList.add("hidden");
         doEnergyReset();
         energy_reset_div.innerHTML = "<h2>Out of Energy</h2>" +
             "<p>You used up all your Energy, but this is not the end.</p>" +
