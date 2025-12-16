@@ -924,19 +924,19 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
 
     open_button.disabled = false;
 
-    energy_reset_div.classList.remove("hidden");
+    
     energy_reset_div.innerHTML = "";
 
     if (GAMESTATE.is_in_energy_reset) {
-        energy_reset_div.classList.add("hidden");
         doEnergyReset();
         energy_reset_div.innerHTML = "<h2>Out of Energy</h2>" +
             "<p>You used up all your Energy, but this is not the end.</p>" +
             "<p>You keep half your Items (rounded up).</p>" +
             "<p>The effects of used Items disappear.</p>" +
-            "<p>You should be mad.</p>";
+            "<p>You should be annoyed.</p>";
         
     } else {
+        energy_reset_div.classList.remove("hidden");
         energy_reset_div.innerHTML = "<h2>Last Run</h2>";
     }
 
