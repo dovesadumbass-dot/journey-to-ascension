@@ -938,15 +938,15 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
         energy_reset_div.innerHTML = "<h2>Last Run</h2>";
     }
 
-    //const button = document.createElement("button");
-    //button.className = "game-over-dismiss";
-    //button.textContent = GAMESTATE.is_in_energy_reset ? "Start the Journey Over, Wiser" : "Dismiss";
+    const button = document.createElement("button");
+    button.className = "game-over-dismiss";
+    button.textContent = GAMESTATE.is_in_energy_reset ? "Start the Journey Over, Wiser" : "Dismiss";
 
-    //button.addEventListener("click", () => {
-    //    energy_reset_div.classList.add("hidden");
-      //  if (GAMESTATE.is_in_energy_reset) {
-        //    doEnergyReset();
-        //}
+    button.addEventListener("click", () => {
+      energy_reset_div.classList.add("hidden");
+        if (GAMESTATE.is_in_energy_reset) {
+            doEnergyReset();
+        }}
     });
     setupTooltipStatic(button, button.textContent, GAMESTATE.is_in_energy_reset ? "Do Energy Reset" : "Return to the game");
     energy_reset_div.appendChild(button);
