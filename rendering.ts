@@ -924,9 +924,6 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
 
     open_button.disabled = false;
 
-    
-    energy_reset_div.innerHTML = "";
-
     if (GAMESTATE.is_in_energy_reset) {
         doEnergyReset();
         energy_reset_div.innerHTML = "<h2>Out of Energy</h2>" +
@@ -937,6 +934,7 @@ function populateEnergyReset(energy_reset_div: HTMLElement) {
         
     } else {
         energy_reset_div.classList.remove("hidden");
+        energy_reset_div.innerHTML = "";
         energy_reset_div.innerHTML = "<h2>Last Run</h2>";
     }
 
