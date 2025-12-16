@@ -1048,7 +1048,7 @@ function populateEndOfContent(end_of_content_div: HTMLElement) {
     setupTooltipStatic(reset_button, "Do Energy Reset", "Do a regular Energy Reset to keep on playing");
     reset_button.addEventListener("click", () => {
         end_of_content_div.classList.add("hidden");
-        ();
+        doEnergyReset();
     });
 }
 
