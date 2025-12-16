@@ -1056,7 +1056,6 @@ function updateGameOver() {
     const showing_energy_reset = !RENDERING.energy_reset_element.classList.contains("hidden");
     if (!showing_energy_reset && GAMESTATE.is_in_energy_reset) {
         populateEnergyReset(RENDERING.energy_reset_element);
-        doEnergyReset();
     }
 
     const showing_end_of_content = !RENDERING.end_of_content_element.classList.contains("hidden");
